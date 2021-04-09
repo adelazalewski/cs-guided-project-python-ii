@@ -25,4 +25,22 @@ Notes:
 
 def emotify(txt):
     # Your code here
+    #````another option```
+    # new = txt.split(' ')
+    # print(new)
+    #````````````
+    new_list = list(txt)
+    #print(new_list)
+    sliced_list = new_list[8:]
+    emotion = "".join(sliced_list)
+    print(emotion)
+    if emotion == "smile":
+        return "Make me :D"
+    elif emotion == "grin":
+        return "Make me :)"
+    else:
+        return "Make me :("
 
+print(emotify("Make me smile"))
+print(emotify("Make me grin"))
+print(emotify("Make me sad"))
