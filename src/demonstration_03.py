@@ -1,3 +1,4 @@
+import math
 """
 Challenge #3:
 
@@ -15,5 +16,17 @@ Notes:
 
 
 def multiply_nums(nums):
-    # Your code here
+    # Your code here 
+    #nums = "2, 4, 6"
+    integer_list = []
+    new_list = list(nums)
+    sliced_list = new_list[0::3]
+    print(sliced_list)
+    for elem in sliced_list:
+        int_elem = int(elem)
+        integer_list.append(int_elem)
+        print(type(int_elem))
+    return math.prod(integer_list)
+        
 
+print(multiply_nums("2, 3"))

@@ -13,8 +13,17 @@ Notes:
 - Return "invalid" if n exceeds the length of the list.
 - Return an empty list if n == 0.
 """
-
+#list[-1] = last element 
+#list[-2] = last 2 elements of the list
 
 def last(a, n):
     # Your code here
+    if n > len(a):
+        return "invalid"
+    elif n == 0 :
+        return []
+    else:
+        return a[-n:] #the last 3/n elements
+
+print(last([1, 2, 3, 4, 5], 1))
 
