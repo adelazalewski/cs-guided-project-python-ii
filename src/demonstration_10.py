@@ -15,7 +15,16 @@ Notes:
 - The return string must be two numbers separated by a single space, and
 the maximum number is first.
 """
+
+import functools
+import operator
 def max_and_min(input_str):
     # Your code here
+    new_list = list(map(int, input_str.split()))
+    new_string = str(max(new_list)) + " " + str(min(new_list))
+    print(type(new_string))
+    return new_string
 
-
+print(max_and_min("1 2 3 4 5"))
+print(max_and_min("1 2 -3 4 5"))
+print(max_and_min("1 9 3 4 -5"))
